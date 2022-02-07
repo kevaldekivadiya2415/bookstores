@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY' ,'wr4k!__udg9&wluylxkr_+z9u8b4v2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DJANGO_DEBUG','') == 'True'
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1:8000','young-tundra-52339.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'bookstore.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-import dj_database_url
+'''import dj_database_url
 
 if os.environ.get('DATABASE_URL'):
     DATABASES = {
@@ -89,15 +89,15 @@ else:
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': BASE_DIR / 'db.sqlite3',
         }
-    }
+    }'''
 
 
-'''DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3'
     }
-}'''
+}
 
 
 # Password validation
